@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateWebSiteSchema, generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/schema.ts';
+
+const websiteSchema = generateWebSiteSchema();
+const orgSchema = generateOrganizationSchema();
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Accueil', url: 'https://comme-chien-et-chat.com' },
+]);
+
+const univers = [
+  {
+    slug: 'arbre-a-chat',
+    label: 'Arbre à chat',
+    emoji: '🌳',
+    description: 'Comparatifs et guides pour choisir le meilleur arbre à chat selon la taille et le tempérament de votre félin.',
+  },
+  {
+    slug: 'fontaine-eau-chat',
+    label: 'Fontaine à eau',
+    emoji: '💧',
+    description: 'Fontaines silencieuses, filtrantes et faciles à entretenir — trouvez la bonne pour votre chat.',
+  },
+  {
+    slug: 'distributeur-croquettes-chat',
+    label: 'Distributeur de croquettes',
+    emoji: '🍽️',
+    description: 'Dosez les repas de votre chat automatiquement avec les meilleurs distributeurs programmables.',
+  },
+  {
+    slug: 'bac-litiere-chat',
+    label: 'Bac à litière',
+    emoji: '🪣',
+    description: 'Litières fermées, autonettoyantes ou à entrée par le dessus — le guide complet.',
+  },
+  {
+    slug: 'sac-a-dos-chat',
+    label: 'Sac à dos chat',
+    emoji: '🎒',
+    description: 'Voyagez sereinement avec votre chat grâce à nos sacs à dos confortables et ventilés.',
+  },
+];
+---
+
+<BaseLayout
+  title="Accessoires pour chats — Comparatifs & Conseils"
+  description="Découvrez nos guides et comparatifs sur les meilleurs accessoires pour chats : arbre à chat, fontaine, distributeur, litière, sac à dos. Conseils d'experts."
+  canonical="https://comme-chien-et-chat.com"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="eyebrow">Blog accessoires chats</span>
+      <h1 class="hero__title">Les meilleurs accessoires<br />pour votre chat, enfin clairs</h1>
+      <p class="hero__subtitle">
+        Comparatifs honnêtes, conseils pratiques et sélections testées — pour que votre félin soit heureux au quotidien.
+      </p>
+      <a href="/arbre-a-chat" class="btn btn--primary">Voir nos guides</a>
+    </div>
+  </section>
+
+  <!-- Univers -->
+  <section class="univers-section">
+    <div class="container">
+      <h2 class="univers-section__title">Nos 5 univers</h2>
+      <div class="univers-grid">
+        {univers.map(u => (
+          <a href={`/${u.slug}`} class="univers-card">
+            <span class="univers-card__emoji" aria-hidden="true">{u.emoji}</span>
+            <h3 class="univers-card__title">{u.label}</h3>
+            <p class="univers-card__desc">{u.description}</p>
+            <span class="univers-card__cta">Explorer →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: var(--color-creme);
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+  .hero__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-terracotta);
+    margin-bottom: 1rem;
+  }
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    font-weight: 600;
+    color: var(--color-anthracite);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+  .hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--color-anthracite);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  .univers-section {
+    padding: 4rem 0 5rem;
+  }
+  .univers-section__title {
+    font-family: var(--font-display);
+    font-size: 2.125rem;
+    font-weight: 600;
+    color: var(--color-anthracite);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .univers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .univers-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.75rem 1.75rem 1.5rem;
+    background: var(--color-creme-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .univers-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 28px 60px -24px rgba(46,40,35,0.38);
+  }
+  .univers-card__emoji {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+  .univers-card__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-anthracite);
+    margin: 0;
+  }
+  .univers-card__desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--color-anthracite);
+    opacity: 0.75;
+    margin: 0;
+    flex: 1;
+  }
+  .univers-card__cta {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-terracotta);
+    margin-top: 0.5rem;
+  }
+</style>

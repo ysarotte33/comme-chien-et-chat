@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 175" role="img" aria-label="Logo comme chien et chat — duo chat terracotta et chien sauge nez à nez">
+  <title>comme chien et chat</title>
+  <g transform="translate(0,-15)">
+    <!-- DOG (droite — sauge) -->
+    <ellipse cx="121" cy="112" rx="16" ry="34" fill="#6B8C70" transform="rotate(-18 121 112)"/>
+    <ellipse cx="185" cy="114" rx="16" ry="34" fill="#6B8C70" transform="rotate(18 185 114)"/>
+    <circle cx="152" cy="120" r="46" fill="#7FA081"/>
+    <ellipse cx="150" cy="140" rx="22" ry="17" fill="#FBF4EA"/>
+    <ellipse cx="141" cy="112" rx="6.5" ry="7.5" fill="#FBF4EA"/>
+    <ellipse cx="166" cy="112" rx="6.5" ry="7.5" fill="#FBF4EA"/>
+    <circle cx="138.5" cy="113" r="3.4" fill="#3A332E"/>
+    <circle cx="163.5" cy="113" r="3.4" fill="#3A332E"/>
+    <ellipse cx="150" cy="131" rx="6.5" ry="5" fill="#3A332E"/>
+    <path d="M150 135 Q150 145 142 145" stroke="#3A332E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M150 135 Q150 145 158 145" stroke="#3A332E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="174" cy="130" rx="7" ry="5" fill="#9BB89C" opacity="0.7"/>
+    <!-- CAT (gauche — terracotta) -->
+    <path d="M54 98 L62 54 L94 86 Z" fill="#D86C45" stroke="#D86C45" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M86 84 L110 52 L120 96 Z" fill="#D86C45" stroke="#D86C45" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M62 84 L66 62 L84 84 Z" fill="#F4A97C"/>
+    <path d="M92 84 L106 64 L112 88 Z" fill="#F4A97C"/>
+    <circle cx="82" cy="120" r="46" fill="#D86C45"/>
+    <ellipse cx="68" cy="116" rx="6.5" ry="7.5" fill="#FBF4EA"/>
+    <ellipse cx="95" cy="116" rx="6.5" ry="7.5" fill="#FBF4EA"/>
+    <circle cx="70.5" cy="117" r="3.4" fill="#3A332E"/>
+    <circle cx="97.5" cy="117" r="3.4" fill="#3A332E"/>
+    <path d="M77 130 L87 130 L82 136 Z" fill="#3A332E"/>
+    <path d="M82 136 Q82 143 75 142" stroke="#3A332E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M82 136 Q82 143 89 142" stroke="#3A332E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="60" cy="130" rx="7" ry="5" fill="#E89B73" opacity="0.8"/>
+    <path d="M52 126 L40 123 M52 131 L39 132" stroke="#FBF4EA" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <!-- Coeur flottant -->
+    <path d="M121 28 C116 21 106 22 106 30 C106 36 114 41 121 46 C128 41 136 36 136 30 C136 22 126 21 121 28 Z" fill="#E8825C"/>
+  </g>
+</svg>

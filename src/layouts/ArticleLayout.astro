@@ -1,0 +1,160 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ArticleMeta from '../components/ArticleMeta.astro';
+import FAQ from '../components/FAQ.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
+import {
+  generateArticleSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+} from '../utils/schema.ts';
+import type { ArticleData } from '../utils/schema.ts';
+
+export interface RelatedArticle {
+  title: string;
+  slug: string;
+  category: string;
+  description: string;
+}
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  article: ArticleData;
+  faqs: { question: string; answer: string }[];
+  relatedArticles?: RelatedArticle[];
+  categoryLabel: string;
+  urlCibleGriffedamour: string;
+  ancreGriffedamour: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  article,
+  faqs,
+  relatedArticles = [],
+  categoryLabel,
+  urlCibleGriffedamour,
+  ancreGriffedamour,
+} = Astro.props;
+
+const articleSchema = generateArticleSchema(article);
+const faqSchema = generateFAQSchema(faqs);
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Accueil', url: 'https://comme-chien-et-chat.com' },
+  { name: categoryLabel, url: `https://comme-chien-et-chat.com/${article.category}` },
+  { name: article.title, url: canonical },
+]);
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: categoryLabel, href: `/${article.category}` },
+  { label: article.title },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {ogImage}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <div class="article-page">
+    <div class="container">
+      <Breadcrumb items={breadcrumbItems} />
+
+      <ArticleMeta
+        author={article.author}
+        datePublished={article.datePublished}
+        dateModified={article.dateModified}
+        category={article.category}
+        keyword={article.title}
+      />
+
+      <article class="article-content">
+        <slot />
+
+        <div class="article-outlinks">
+          <p>
+            Pour aller plus loin, retrouvez notre sélection sur {ancreGriffedamour}.
+          </p>
+        </div>
+      </article>
+
+      <FAQ {faqs} />
+
+      {relatedArticles.length > 0 && <RelatedArticles articles={relatedArticles} />}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-page {
+    padding: 2.5rem 0 4rem;
+    background: var(--color-creme);
+    min-height: 100vh;
+  }
+  .article-content {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--color-anthracite);
+    max-width: 72ch;
+  }
+  .article-content :global(h1) {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 600;
+    color: var(--color-anthracite);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .article-content :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-anthracite);
+    margin: 2.5rem 0 1rem;
+  }
+  .article-content :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: var(--color-anthracite);
+    margin: 1.75rem 0 0.75rem;
+  }
+  .article-content :global(p) {
+    margin-bottom: 1.25rem;
+  }
+  .article-content :global(a) {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .article-content :global(li) {
+    margin-bottom: 0.35rem;
+  }
+  .article-outlinks {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-creme-card);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-sauge);
+    font-size: 1rem;
+  }
+  .article-outlinks p {
+    margin: 0;
+  }
+</style>
