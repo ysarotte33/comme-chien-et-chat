@@ -1,0 +1,64 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  faqs: FAQItem[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<section class="faq-section">
+  <h2 class="faq-section__title">Questions fréquentes</h2>
+  <dl class="faq-list">
+    {faqs.map((faq) => (
+      <div class="faq-item">
+        <dt class="faq-item__question">{faq.question}</dt>
+        <dd class="faq-item__answer">{faq.answer}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
+
+<style>
+  .faq-section {
+    margin: 3rem 0;
+  }
+  .faq-section__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h2, 2.125rem);
+    font-weight: 600;
+    color: var(--color-anthracite);
+    margin-bottom: 1.5rem;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .faq-item {
+    background: var(--color-creme-card);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-terracotta);
+    padding: 1.25rem 1.5rem;
+    box-shadow: var(--shadow-card);
+  }
+  .faq-item__question {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-anthracite);
+    margin-bottom: 0.65rem;
+  }
+  .faq-item__answer {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-anthracite);
+    opacity: 0.85;
+    margin: 0;
+  }
+</style>

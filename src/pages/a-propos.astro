@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateBreadcrumbSchema } from '../utils/schema.ts';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Accueil', url: 'https://comme-chien-et-chat.com' },
+  { name: 'À propos', url: 'https://comme-chien-et-chat.com/a-propos' },
+]);
+---
+
+<BaseLayout
+  title="À propos — comme chien et chat"
+  description="Découvrez Marie Fontaine, rédactrice passionnée de chats et créatrice de comme-chien-et-chat.com. Des conseils honnêtes pour les propriétaires de félins."
+  canonical="https://comme-chien-et-chat.com/a-propos"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <section class="page-content">
+    <div class="container page-content__inner">
+      <span class="eyebrow">L'équipe</span>
+      <h1>À propos de nous</h1>
+
+      <div class="author-block">
+        <div class="author-avatar" aria-hidden="true">MF</div>
+        <div class="author-info">
+          <h2 class="author-name">Marie Fontaine</h2>
+          <p class="author-role">Rédactrice & passionnée féline</p>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>
+          Bonjour ! Je suis Marie, propriétaire de trois chats — Cannelle, Miso et Pixel — depuis plus de dix ans.
+          Ce blog est né d'un constat simple : il est vraiment difficile de s'y retrouver dans la jungle des accessoires pour chats.
+        </p>
+        <p>
+          Trop de produits médiocres, trop de sites qui ne pensent qu'à la commission.
+          <strong>comme chien et chat</strong> existe pour donner des conseils francs, basés sur des tests réels et l'avis de vétérinaires.
+        </p>
+        <h2>Notre approche</h2>
+        <p>
+          Chaque article est rédigé après avoir consulté plusieurs sources sérieuses et, quand c'est possible, testé le produit directement sur mes trois felins.
+          Je décris autant les points forts que les faiblesses — sans langue de bois.
+        </p>
+        <h2>Les 5 univers que je couvre</h2>
+        <ul>
+          <li><strong>Arbres à chat</strong> — pour que votre félin grimpe, joue et se détende</li>
+          <li><strong>Fontaines à eau</strong> — parce qu'un chat bien hydraté est un chat en bonne santé</li>
+          <li><strong>Distributeurs de croquettes</strong> — pour gérer les repas même en votre absence</li>
+          <li><strong>Bacs à litière</strong> — le sujet tabou mais essentiel</li>
+          <li><strong>Sacs à dos</strong> — pour sortir et voyager avec votre compagnon</li>
+        </ul>
+        <p>
+          Si vous avez des questions ou des suggestions, n'hésitez pas à <a href="/contact">me contacter</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-content { padding: 3rem 0 5rem; background: var(--color-creme); min-height: 100vh; }
+  .page-content__inner { max-width: 720px; }
+  .eyebrow { display: inline-block; font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--color-terracotta); margin-bottom: 0.75rem; }
+  h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.25rem); font-weight: 600; color: var(--color-anthracite); margin: 0 0 2rem; }
+  .author-block { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2.5rem; padding: 1.5rem; background: var(--color-creme-card); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+  .author-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--color-terracotta); color: white; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .author-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--color-anthracite); margin: 0 0 0.25rem; }
+  .author-role { font-family: var(--font-body); font-size: 0.9rem; color: var(--color-anthracite); opacity: 0.7; margin: 0; }
+  .prose { font-family: var(--font-body); font-size: 1.125rem; line-height: 1.65; color: var(--color-anthracite); }
+  .prose h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; color: var(--color-anthracite); margin: 2rem 0 1rem; }
+  .prose p { margin-bottom: 1.25rem; }
+  .prose ul { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .prose li { margin-bottom: 0.35rem; }
+  .prose a { color: var(--color-terracotta); }
+</style>
