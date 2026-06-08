@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages statiques -->
+  <url><loc>https://comme-chien-et-chat.com</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/a-propos</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/contact</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <!-- Pages catégories -->
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat</loc><lastmod>2026-08-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Articles arbre-a-chat -->
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat/meilleur-arbre-a-chat-2025</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat/arbre-a-chat-grand-chat</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat/arbre-a-chat-petit-appartement</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat/arbre-a-chat-solide</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/arbre-a-chat/arbre-a-chat-pas-cher</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Articles fontaine-eau-chat -->
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat/meilleure-fontaine-eau-chat-2025</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat/fontaine-eau-chat-silencieuse</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat/fontaine-eau-chat-filtrante</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat/fontaine-eau-chat-inox</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/fontaine-eau-chat/fontaine-eau-chat-plusieurs-chats</loc><lastmod>2026-07-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Articles distributeur-croquettes-chat -->
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat/meilleur-distributeur-croquettes-chat-2025</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat/distributeur-croquettes-chat-automatique</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat/distributeur-croquettes-chat-wifi</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat/distributeur-croquettes-plusieurs-chats</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/distributeur-croquettes-chat/distributeur-croquettes-chat-camera</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Articles bac-litiere-chat -->
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat/meilleur-bac-litiere-chat-2025</loc><lastmod>2026-08-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat/bac-litiere-chat-ferme</loc><lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat/bac-litiere-chat-autonettoyant</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat/bac-litiere-chat-entree-dessus</loc><lastmod>2026-09-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/bac-litiere-chat/bac-litiere-plusieurs-chats</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Articles sac-a-dos-chat -->
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat/meilleur-sac-a-dos-chat-2025</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat/sac-a-dos-chat-bulles</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat/sac-a-dos-chat-grand-gabarit</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat/sac-a-dos-chat-avion</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://comme-chien-et-chat.com/sac-a-dos-chat/sac-a-dos-chat-veto</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
